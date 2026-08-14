@@ -1,7 +1,10 @@
 import "./Home.css";
 import basketImage from "../../assets/basket.png";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+  
   return (
     <main className="home" dir="rtl">
 
@@ -27,7 +30,11 @@ function Home() {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-button">
+            {/* ✅ دکمه اصلاح شده */}
+            <button
+              className="primary-button"
+              onClick={() => navigate("/budget")}
+            >
               شروع کنید ←
             </button>
 
